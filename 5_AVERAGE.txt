@@ -1,0 +1,29 @@
+PROGRAM SOMA
+   DEFINE VAR01 INT FLOAT VAR04 SUM
+   
+   ;Sum of 4 numbers entered by the user
+   SET SUM = 0
+   PRINT " Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   PRINT " Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   PRINT "Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   PRINT "Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   
+   ;Average of values.
+   SET SUM = SUM * 100 ;x1000 to add comma.
+   SET SUM = SUM / 4
+   
+   ;Decimal places.
+   SET INT = SUM / 1000
+   SET FLOAT = SUM MOD 1000 ;To get decimal places.
+   
+   PRINTLN "Average = " INT "," FLOAT
+       
+END

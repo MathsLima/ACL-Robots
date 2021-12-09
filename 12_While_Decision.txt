@@ -1,0 +1,26 @@
+PROGRAM DECIS
+
+DEFINE VAR
+
+LABEL 001 
+   READ VAR 
+   IF VAR > 10
+     ANDIF VAR < 20
+     PRINTLN "Number between 10 and 20"
+   ELSE
+     PRINTLN "Number is not between 10 and 20"
+   ENDIF
+   
+   PRINTLN "Continue? (1 = YES)"
+   READ VAR
+   IF VAR <> 1
+     GOTO 002
+   ENDIF
+   
+GOTO 001
+
+LABEL 002 
+PRINTLN "See you soon!"
+
+END
+      

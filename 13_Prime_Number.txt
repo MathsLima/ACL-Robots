@@ -1,0 +1,26 @@
+PROGRAM PRINU
+
+  DEFINE NUM REST NTEST
+  PRINTLN "Type a number: "
+  READ NUM
+  
+  SET NTEST = 2 
+  LABEL 001
+    SET REST = NUM MOD NTEST
+    IF REST = 0
+      GOTO 002
+    ENDIF
+    SET NTEST = NTEST + 1
+    IF NTEST < NUM
+      GOTO 001
+    ENDIF
+  PRINTLN "Prime number"
+  GOTO 003
+  
+  LABEL 002
+  PRINTLN "Isn't prime number"
+  
+  LABEL 003
+  PRINTLN "Finish"
+  
+END 

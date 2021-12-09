@@ -1,0 +1,21 @@
+PROGRAM EX1
+
+   DIM VET [5]
+   DEFINE IND SUM BIG INT FRAC
+   
+   SET SUM = 0 ;Sum starts in zero
+   FOR IND = 1 TO 5 ;Go from to 5
+     READ VET[IND]
+     SET SUM = SUM + VET[IND] ;Keep the value
+   ENDFOR 
+   
+   FOR IND = 1 TO 5
+     PRINT VET[IND] " "
+   ENDFOR
+     
+   PRINTLN "SUM = " SUM
+   
+END
+
+;IND = INDEXING | SUM = SUM | BIG = BIGGER
+;INT = WHOLE NUMBER | FRAC = FRACTIONAL

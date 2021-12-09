@@ -1,0 +1,13 @@
+PROGRAM EXVET
+   DEFINE AUX ;Aux and variable
+   DIM VET[5] ;Vector with 5 elements
+   
+   FOR AUX = 1 TO 5
+      SET VET[AUX] = [AUX] * 5 ;To each vector from 1 to 5, is multp. by 5.
+   ENDFOR ;Finish FOR
+   
+   FOR AUX = 1 TO 5
+      PRINTLN VET[AUX] " "
+   ENDFOR
+    
+END

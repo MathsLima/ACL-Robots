@@ -1,0 +1,9 @@
+PROGRAM EXFOR
+   DEFINE AUX ;Aux and variable
+   
+   FOR AUX = 1 TO 5
+      PRINT AUX " "
+   ENDFOR ;Finish FOR
+   PRINTLN " "
+   
+END

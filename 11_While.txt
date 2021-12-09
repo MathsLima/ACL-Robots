@@ -1,0 +1,16 @@
+PROGRAM LOOP
+
+DEFINE
+   
+LABEL 001
+   READ VAR
+   IF VAR > 10
+     ANDIF VAR < 20
+     PRINTLN "Number between 10 and 20"
+   ELSE
+     PRINTLN "Number is not between 10 and 20"
+   ENDIF
+
+GOTO 001
+
+END  

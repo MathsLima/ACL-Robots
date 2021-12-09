@@ -1,0 +1,16 @@
+PROGRAM EXIF
+
+   DEFINE VAR
+   READ VAR ;User put a number
+   
+   IF VAR > 10
+      IF VAR < 20
+         PRINTLN "Number between 10 and 20"
+         ELSE
+            PRINTLN "Number greater than or equal to 20"
+      ENDIF
+   ELSE
+      PRINTLN "Number less than or equal to 10"
+   ENDIF
+   
+END

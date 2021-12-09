@@ -1,0 +1,9 @@
+PROGRAM DIV 
+   DEFINE VAR VAR02 VAR03
+   SET VAR01 = 100
+   SET VAR02 = 3
+   SET VAR03 = VAR01 / VAR02
+   PRINTLN "RESULT = " VAR03
+END
+
+;This division results in an integer.

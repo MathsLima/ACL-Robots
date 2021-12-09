@@ -1,0 +1,21 @@
+PROGRAM SUM
+   DEFINE VAR01 VAR02 VAR03 VAR04 SUM
+   SET SUM = 0
+   PRINT " Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   PRINT " Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   PRINT "Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   PRINT "Type a number: "
+   READ VAR01
+   SET SUM = SUM + VAR01
+   
+   PRINTLN "SUM = " SUM
+   
+END
+
+;Sum of several variables entered by the user with accumulated sum.
