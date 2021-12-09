@@ -1,0 +1,106 @@
+PROGRAM SALES
+
+DEFINE VAR IND PROD SUM MONT MED INT FLOAT MAI MEN MVEN
+DIM VET[12]
+
+LABEL 001
+
+      PRINTLN ""
+      PRINTLN "SELECT THE OPTION"
+      PRINTLN "1 - FILL SALES VECTOR"
+      PRINTLN "2 - UPDATE PRODUCT PRICE"
+      PRINTLN "3 - STATISTICS"
+      PRINTLN "4 - EXIT"
+      PRINTLN ""
+      
+      READ VAR
+      
+      IF VAR = 1
+         GOTO 002
+      ENDIF
+      
+      IF VAR = 2
+         GOTO 003
+      ENDIF
+      
+      IF VAR = 3
+         GOTO 004
+      ENDIF
+      
+      IF VAR = 4
+         GOTO 005
+      ENDIF   
+
+GOTO 001
+
+LABEL 002
+      PRINTLN "TYPE THE UNIT PRICE OF THE PRODUCT:"
+          READ PROD
+      PRINTLN "TYPE THE NUMBER OF SALES PER MONTH:"
+      PRINTLN ""
+      FOR IND = 1 TO 12
+          READ VET[IND]
+          SET SUM = SUM + VET[IND]        
+      ENDFOR
+      GOTO 001
+
+LABEL 003          
+      GOTO 002
+
+LABEL 004
+      ; SUM
+      PRINTLN "NUMBER OF PRODUCTS SOLD PER YEAR: " SUM
+      
+      ; AMOUNT            
+      SET MONT = SUM * PROD
+      PRINTLN "ANNUAL AMOUNT SOLD: " MONT
+
+      ; AVERAGE
+      SET MED = MONT * 100
+      SET MED = MED / 12
+
+      SET INT = MED / 100
+      SET FLOAT = MED MOD 100 
+
+      PRINTLN "AVERAGE SALES OF THE MONTHS: " INT "," FLOAT
+      
+      ; LARGER AND SMALLEST MONTH
+      DEFINE MAVET
+      DEFINE MEVET
+      FOR IND = 1 TO 12
+          IF VET[IND] > MAVET 
+               SET MAI = IND
+               SET MAVET = VET[IND]              
+          ELSE     
+               IF MEVET < VET[IND]
+                 SET MEN = IND
+                 SET MEVET = VET[IND]
+              ENDIF
+          ENDIF
+      ENDFOR
+      FOR IND = 1 TO 12
+          IF VET[IND] < MEVET 
+               SET MEN = IND
+               SET MEVET = VET[IND]              
+          ENDIF
+      ENDFOR
+      
+      PRINTLN "MONTH WITH THE HIGHEST NUMBER OF SALES: " MAI
+      PRINTLN "MONTH WITH LOWEST NUMBER OF SALES: " MEN
+      
+      ; AVERAGE SALES
+      SET MVEN = SOMA / 12
+      PRINTLN "ANUAL AVERAGE SALES: " MVEN
+      
+      FOR IND = 1 TO 12
+          IF VET[IND] < MVEN
+             PRINTLN "MONTH BELOW AVERAGE: " IND
+          ENDIF
+      ENDFOR
+      
+      GOTO 001
+
+LABEL 005
+      PRINTLN "SEE YOU SOON!"
+
+END
